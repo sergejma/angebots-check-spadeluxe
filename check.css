@@ -726,3 +726,27 @@
 .berater-duo strong { display: block; font-size: 15px; line-height: 1.3; }
 .berater-duo span { display: block; font-size: 13px; color: var(--color-stone, #6b6b73); line-height: 1.35; }
 @media (max-width: 600px) { .berater-duo { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Vergleichstabelle: Ihr Angebot (Fragezeichen) neben SPA Deluxe (Haken) ---------- */
+.vgl { background: #fff; border: 1px solid var(--color-line, #E5E2DC); border-radius: 16px; overflow: hidden; margin-top: 1.75rem; }
+.vgl-kopf, .vgl-zeile { display: grid; grid-template-columns: 1.1fr 1.2fr 1.3fr; }
+.vgl-kopf { background: var(--color-ink, #1A1A1A); color: #fff; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+.vgl-kopf span { padding: 12px 16px; }
+.vgl-kopf .vgl-wir { background: var(--color-action, #E8551A); }
+.vgl-zeile { border-top: 1px solid var(--color-line, #E5E2DC); }
+.vgl-zeile > div { padding: 14px 16px; font-size: 15px; line-height: 1.45; display: flex; gap: 10px; align-items: flex-start; min-width: 0; }
+.vgl-punkt strong { font-size: 16px; font-weight: 600; }
+.vgl-frage { color: var(--color-slate, #5B6470); }
+.vgl-zeile .vgl-wir { background: var(--color-action-bg, #FDEFE8); }
+.vgl-label { display: none; font-weight: 600; color: var(--color-ink, #1A1A1A); }
+.vgl-ikon { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; margin-top: 1px; }
+.vgl-ikon.frage { color: var(--color-action, #E8551A); border: 2px solid var(--color-action, #E8551A); background: #fff; }
+.vgl-ikon.haken { background: var(--color-action, #E8551A); color: #fff; }
+@media (max-width: 719px) {
+  .vgl-kopf { display: none; }
+  .vgl-zeile { grid-template-columns: 1fr; }
+  .vgl-zeile > div { padding: 10px 14px; }
+  .vgl-punkt { padding-bottom: 2px; }
+  .vgl-frage { padding-top: 0; }
+  .vgl-label { display: inline; }
+}
