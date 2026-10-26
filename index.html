@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1A1A1A" />
+  <title>Angebots-Check: Ihr Whirlpool-Angebot prüfen lassen · SPA Deluxe</title>
+  <meta name="description" content="Sie haben schon ein Whirlpool-Angebot? Unsere Berater prüfen es kostenlos nach sieben Punkten und vergleichen es mit Modellen von Jacuzzi, Vortex Spas, Treesse und Fisher Spas. Anruf innerhalb von zwei Werktagen, kein Kaufzwang." />
+  <link rel="canonical" href="https://angebots-check.spadeluxe.de/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sie haben schon ein Whirlpool-Angebot? Lassen Sie es prüfen, bevor Sie unterschreiben." />
+  <meta property="og:description" content="Kostenloser Angebots-Check nach sieben Punkten, Vergleich mit über 100 Modellen von vier Marken, Anruf innerhalb von zwei Werktagen. Kein Kaufzwang." />
+  <meta property="og:image" content="https://angebots-check.spadeluxe.de/assets/halle_senden.jpg" />
+  <meta property="og:image:width" content="1700" />
+  <meta property="og:image:height" content="1133" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="check.css" />
+
+  <!--
+    Angebots-Check, Stand 26.10.2026 (Freigabe des Konzepts durch Sergej am 26.10.2026).
+    Technik wie die Consumenta-Seite: styles.css, app.js (Einwilligung, Messung, Zoho Web-to-Lead,
+    Erfolgsanzeige, PLZ zur Ausstellung). check.js schreibt Marke, Modell, Preis, Umfang, Zeitpunkt
+    und Stellplatz als Text in „Description" und prüft das Pflichtfeld Modell.
+    Vorgabe Sergej: das Wort „schriftlich" kommt nirgends vor. Ziel ist der Anruf des Beraters
+    und das Probesitzen in der Ausstellung.
+    Zoho: Webformular „Angebots-Check LP" mit Lead Source „Lead: Angebots-Check"; solange xnQsjsdp
+    mit TODO beginnt, sendet app.js nichts und zeigt nur die Bestätigung.
+    Vorschau: ?vorschau=danke zeigt die Bestätigung, ?vorschau=formular setzt zurück, ?ohne=cookies blendet
+    das Banner aus, ?ohne=header die feste Kopfzeile (für Bildschirmfotos).
+  -->
+</head>
+<body>
+
+<header class="site-header" id="site-header" aria-hidden="true">
+  <div class="site-header-inner">
+    <a href="#top" aria-label="Zum Seitenanfang">
+      <img src="assets/logo-white.png" alt="SPA Deluxe" class="logo" width="120" height="26" />
+    </a>
+
+    <div class="header-center">
+      <div class="reviews compact" aria-label="Google-Bewertungen: 4,8 von 5 Sternen aus über 560 Bewertungen">
+        <span class="stars" aria-hidden="true">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <span class="rating">4,8</span>
+        <span class="count">· 560+ Bewertungen</span>
+      </div>
+    </div>
+
+    <div class="header-cta">
+      <a href="tel:+4925974753015" class="btn btn-call" data-cta="header-call" aria-label="Anrufen 02597 4753015">
+        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="btn-call-text">02597 4753015</span>
+      </a>
+      <a href="#check" class="btn btn-primary" data-cta="header-primary">Angebot prüfen lassen</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO · der Hook als Überschrift, Foto aus der Ausstellung
+     ============================================================ -->
+<section class="hero hero--messe" id="top">
+  <div class="hero-wrap">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="kicker">Angebots-Check · kostenlos und unverbindlich</p>
+
+        <h1>Sie haben schon ein Whirlpool-Angebot? Lassen Sie es prüfen, bevor Sie unterschreiben.</h1>
+
+        <p class="hero-sub">
+          Unsere Berater kennen vier Marken und über 100 Modelle. Sie sehen schnell, ob Preis, Ausstattung und Service zusammenpassen, und besprechen es mit Ihnen am Telefon.
+        </p>
+
+        <ul class="hero-vorteile">
+          <li><span class="check" aria-hidden="true">✓</span><span>Ihr Berater ruft Sie innerhalb von zwei Werktagen an und geht Ihr Angebot Punkt für Punkt mit Ihnen durch</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>Vergleich mit passenden Modellen von Jacuzzi, Vortex Spas, Treesse und Fisher Spas</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>Kein Kaufzwang, Ihr Angebot bleibt bei uns und wird nicht weitergegeben</span></li>
+        </ul>
+
+        <div class="cta-row">
+          <a href="#check" class="btn btn-primary btn-arrow" data-cta="hero-primary">Angebot prüfen lassen</a>
+          <a href="#pruefpunkte" class="hero-link" data-cta="hero-secondary">Was wir prüfen</a>
+        </div>
+
+        <p class="hero-proof"><span class="stars" aria-hidden="true">★★★★★</span> 4,8 bei Google · über 560 Bewertungen</p>
+      </div>
+
+      <div class="hero-media">
+        <div class="media-slot">
+          <img src="assets/halle_senden.jpg" alt="Ausstellung von SPA Deluxe in Senden mit vielen Whirlpools nebeneinander" width="1700" height="1133" loading="eager" decoding="async" fetchpriority="high" />
+          <span class="media-caption">Ausstellung Senden, eine von sechs</span>
+        </div>
+      </div>
+    </div>
+
+    <dl class="messe-fakten" aria-label="Der Check auf einen Blick">
+      <div class="fakt"><dt>Kosten</dt><dd>0 €<small>kostenlos und ohne Kaufzwang</small></dd></div>
+      <div class="fakt"><dt>Antwort</dt><dd>in 2 Werktagen<small>Ihr Berater ruft Sie an</small></dd></div>
+      <div class="fakt"><dt>Vergleich</dt><dd>4 Marken<small>über 100 Modelle im Blick</small></dd></div>
+      <div class="fakt"><dt>Danach</dt><dd>Probesitzen<small>in einer von sechs Ausstellungen</small></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRÜFPUNKTE · sieben Kriterien
+     ============================================================ -->
+<section class="alt" id="pruefpunkte">
+  <div class="wrap">
+    <div class="section-meta">
+      <span class="num">Was wir prüfen</span>
+    </div>
+    <h2>Sieben Punkte, an denen sich ein Angebot entscheidet.</h2>
+    <p class="lead">Der Preis steht groß im Angebot. Was dahinter steckt, sieht man erst beim zweiten Blick. Genau den machen unsere Berater für Sie.</p>
+
+    <div class="stack">
+      <ol class="stack-liste">
+        <li>
+          <span class="stack-check" aria-hidden="true">1</span>
+          <div class="stack-text"><strong>Isolierung und Stromkosten</strong><span>Dämmung, Abdeckung und Heizung entscheiden, was der Whirlpool im Winter jeden Monat kostet. Ein günstiger Preis kann über die Jahre teuer werden.</span></div>
+          <span class="stack-wert">Betrieb</span>
+        </li>
+        <li>
+          <span class="stack-check" aria-hidden="true">2</span>
+          <div class="stack-text"><strong>Pumpen, Düsen und Steuerung</strong><span>Anzahl und Qualität der Pumpen, das Düsenbild, Filtration und Steuerung im Verhältnis zum Preis.</span></div>
+          <span class="stack-wert">Technik</span>
+        </li>
+        <li>
+          <span class="stack-check" aria-hidden="true">3</span>
+          <div class="stack-text"><strong>Garantie und Hersteller</strong><span>Welche Garantie der Hersteller gibt, worauf genau, und wer in Deutschland dahintersteht, wenn es darauf ankommt.</span></div>
+          <span class="stack-wert">Sicherheit</span>
+        </li>
+        <li>
+          <span class="stack-check" aria-hidden="true">4</span>
+          <div class="stack-text"><strong>Lieferung und Aufstellung</strong><span>Ist die Lieferung bis zum Stellplatz enthalten, mit Kran, Aufstellung, Einweisung und Abnahme? Oft steht sie klein gedruckt extra.</span></div>
+          <span class="stack-wert">Enthalten?</span>
+        </li>
+        <li>
+          <span class="stack-check" aria-hidden="true">5</span>
+          <div class="stack-text"><strong>Service vor Ort</strong><span>Wer kommt, wenn etwas ist, und wie schnell. Wir haben eigene Techniker in ganz Deutschland.</span></div>
+          <span class="stack-wert">Nähe</span>
+        </li>
+        <li>
+          <span class="stack-check" aria-hidden="true">6</span>
+          <div class="stack-text"><strong>Abdeckung und Zubehör</strong><span>Thermoabdeckung, Treppe, Ersatzfilter und Wasserpflege: Genau das fehlt in vielen Angeboten und kommt später obendrauf.</span></div>
+          <span class="stack-wert">Vollständig?</span>
+        </li>
+        <li>
+          <span class="stack-check" aria-hidden="true">7</span>
+          <div class="stack-text"><strong>Preis im Verhältnis zur Leistung</strong><span>Was ein vergleichbares Modell bei uns kostet, mit allem, was dazugehört. Das sagt Ihnen Ihr Berater am Telefon.</span></div>
+          <span class="stack-wert">Vergleich</span>
+        </li>
+      </ol>
+
+      <div class="stack-summe">
+        <div><span class="k">Ihr Einsatz</span><span class="v">3 Minuten</span></div>
+        <div><span class="k">Ergebnis</span><span class="v">ein Anruf, der Klarheit bringt</span></div>
+      </div>
+
+      <div class="stack-cta">
+        <a href="#check" class="btn btn-primary btn-arrow" data-cta="stack-primary">Angebot prüfen lassen</a>
+        <span class="hinweis">Kostenlos, ohne Kaufzwang</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABLAUF · drei Schritte
+     ============================================================ -->
+<section id="ablauf">
+  <div class="wrap-wide">
+    <div class="wrap" style="padding:0;">
+      <div class="section-meta">
+        <span class="num">So läuft der Check</span>
+      </div>
+      <h2>Drei Schritte, und Sie wissen, woran Sie sind.</h2>
+    </div>
+
+    <ol class="steps-grid">
+      <li class="why-card step-card">
+        <span class="num">Jetzt</span>
+        <h3>Eckdaten eintragen</h3>
+        <p>Marke, Modell, Preis und was im Angebot enthalten ist. Dauert drei Minuten. Das Angebot selbst können Sie Ihrem Berater danach per E-Mail oder WhatsApp schicken.</p>
+      </li>
+      <li class="why-card step-card">
+        <span class="num">In zwei Werktagen</span>
+        <h3>Ihr Berater ruft an</h3>
+        <p>Er geht die sieben Punkte mit Ihnen durch, nennt vergleichbare Modelle der vier Marken und sagt Ihnen, was sie bei uns kosten, mit allem, was dazugehört.</p>
+      </li>
+      <li class="why-card step-card">
+        <span class="num">Danach</span>
+        <h3>Probesitzen in der Ausstellung</h3>
+        <p>Auf Wunsch in einer unserer sechs Ausstellungen, mit den Modellen aus dem Check. Sie entscheiden in Ruhe, ohne Kaufzwang.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     BERATER · Team, Auszeichnungen, Bewertungen
+     ============================================================ -->
+<section class="alt" id="berater">
+  <div class="wrap-wide">
+    <div class="wrap" style="padding:0;">
+      <div class="section-meta">
+        <span class="num">Wer prüft</span>
+      </div>
+      <h2>Berater, die vier Marken nebeneinander kennen.</h2>
+      <p class="lead">
+        Unsere Berater führen über 100 Modelle von Jacuzzi, Vortex Spas, Treesse und Fisher Spas in sechs Ausstellungen.
+        Sie sagen Ihnen, welches zu Ihrem Garten, Ihren Plänen und Ihrem Budget passt, und wo Ihr Angebot im Vergleich steht.
+      </p>
+    </div>
+
+    <div class="trust-team-block">
+      <picture>
+        <source media="(max-width: 767px)" type="image/webp" srcset="assets/trust-team-mobile.webp" />
+        <source media="(max-width: 767px)" type="image/jpeg" srcset="assets/trust-team-mobile.jpg" />
+        <source type="image/webp" srcset="assets/trust-team.webp" />
+        <img src="assets/trust-team.jpg" alt="Die Berater von SPA Deluxe. Deutscher Kunden-Award der DtGV: 1. Platz für Kundenzufriedenheit. Google: 4,8 Sterne aus über 560 Bewertungen." width="1300" height="780" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+
+    <div class="wrap" style="padding:0;">
+      <div class="trust-strip" style="margin-top:1.5rem;">
+        <span class="trust-pill"><span class="dot"></span> DtGV-Ausgezeichnet · 7× 1. Platz</span>
+        <span class="trust-pill"><span class="dot"></span> 9 Jahre am Markt</span>
+        <span class="trust-pill"><span class="dot"></span> 6 Ausstellungen in Deutschland</span>
+        <span class="trust-pill"><span class="dot"></span> Über 4.000 verkaufte Whirlpools</span>
+        <span class="trust-pill"><span class="dot"></span> Nr. 1 Händler für Jacuzzi, Vortex Spas, Treesse und Fisher Spas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="fragen">
+  <div class="wrap">
+    <div class="section-meta">
+      <span class="num">Häufige Fragen</span>
+    </div>
+    <h2>Was Kunden uns vor dem Check fragen.</h2>
+
+    <div class="faq-list" role="list">
+      <article class="faq-item open" role="listitem">
+        <button class="faq-q" aria-expanded="true">
+          <span>„Muss ich mein Angebot hochladen?"</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>
+              Nein. Die Eckdaten im Formular reichen für den ersten Blick. Wenn Sie mögen, schicken Sie das
+              Angebot nach dem Anruf Ihrem Berater per E-Mail oder WhatsApp, dann wird der Vergleich genauer.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span>„Bekomme ich ein Gegenangebot?"</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>
+              Ihr Berater nennt Ihnen am Telefon vergleichbare Modelle und sagt, was sie bei uns kosten, mit allem,
+              was dazugehört. Ob Sie darauf eingehen, entscheiden Sie. Am besten nach dem Probesitzen.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span>„Was passiert mit meinem Angebot und meinen Daten?"</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>
+              Beides bleibt bei uns. Wir geben weder Ihre Daten noch das Angebot an Dritte weiter, und wir rufen
+              nur an, um den Check mit Ihnen zu besprechen.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span>„Ich habe noch kein Angebot, nur Modelle im Kopf."</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>
+              Dann tragen Sie die Modelle ein, die Sie im Blick haben. Ihr Berater sagt Ihnen, was sie unterscheidet
+              und in welcher Ausstellung Sie sie Probe sitzen können.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span>„Was kostet der Check?"</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>
+              Nichts. Die Prüfung und die Beratung sind kostenlos, eine Kaufverpflichtung gibt es nicht.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          <span>„Wie schnell meldet sich jemand?"</span>
+          <span class="icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <p>
+              Werktags innerhalb von zwei Werktagen, meist schneller. Ihr Berater ruft von einer Nummer von SPA Deluxe an.
+              Lieber sofort? <a href="tel:+4925974753015">02597 4753015</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CHECK · Eckdaten und Kontakt (Zoho Web-to-Lead) + Bestätigung
+     data-funnel geht als Parameter in die Messereignisse, data-pdf-name als content_name ins Meta-Ereignis Lead.
+     ============================================================ -->
+<section class="final-cta-section" id="check" data-funnel="angebots-check" data-pdf="" data-pdf-name="Angebots-Check">
+  <div class="wrap">
+    <div class="section-meta">
+      <span class="num" style="color:rgba(255,255,255,0.5);">Angebot prüfen lassen</span>
+    </div>
+    <h2>Lassen Sie Ihr Angebot prüfen.</h2>
+    <p class="lead">
+      Drei Minuten für die Eckdaten, dann ruft Ihr Berater an und geht die sieben Punkte mit Ihnen durch.
+      Kostenlos und ohne Kaufzwang.
+    </p>
+
+    <div class="form-wrap" id="lead-box">
+      <div class="form-step" id="step-kontakt">
+        <h3>Ihr Angebots-Check</h3>
+        <p class="form-sub">Eckdaten aus Ihrem Angebot und Ihre Kontaktdaten. Je genauer, desto besser der Vergleich.</p>
+        <ul class="form-inklusive" aria-label="Im Check enthalten">
+          <li>Sieben Prüfpunkte</li>
+          <li>Vier Marken im Vergleich</li>
+          <li>Anruf in zwei Werktagen</li>
+          <li>Kein Kaufzwang</li>
+        </ul>
+
+        <form id="lead-form" action="https://crm.zoho.eu/crm/WebToLeadForm" method="POST" target="zoho-lead-sink" accept-charset="UTF-8" novalidate>
+          <!-- Zoho-Webformular „Angebots-Check LP": Kennungen nach dem Anlegen eintragen. Solange die Kennungen
+               mit TODO beginnen, sendet app.js nichts und zeigt nur die Bestätigung. -->
+          <input type="hidden" name="xnQsjsdp" value="TODO-angebots-check" />
+          <input type="hidden" name="xmIwtLD" value="TODO-angebots-check" />
+          <input type="hidden" name="actionType" value="TGVhZHM=" />
+          <input type="hidden" name="returnURL" value="https://angebots-check.spadeluxe.de/" />
+          <input type="hidden" name="Lead Source" value="Lead: Angebots-Check" />
+          <!-- Eckdaten des Angebots als Text (check.js). -->
+          <input type="hidden" name="Description" id="lead-description" value="" />
+
+          <!-- Attribution wie auf der Bauherren-Seite: app.js füllt die Werte aus currentAttribution(). -->
+          <input type="hidden" name="LEADCF157" data-attr="utm_source" data-max="100" />
+          <input type="hidden" name="LEADCF156" data-attr="utm_medium" data-max="100" />
+          <input type="hidden" name="LEADCF159" data-attr="utm_campaign" data-max="100" />
+          <input type="hidden" name="LEADCF158" data-attr="gclid" data-max="255" />
+          <input type="hidden" name="zc_gad" data-attr="gclid" />
+          <input type="hidden" name="LEADCF177" data-attr="utm_content" data-max="255" />
+          <input type="hidden" name="LEADCF178" data-attr="fbclid" data-max="255" />
+          <!-- Nächste Ausstellung aus der PLZ (app.js): Filiale als Text, Territory als Auswahl. -->
+          <input type="hidden" name="LEADCF169" data-filiale data-max="255" />
+          <input type="hidden" name="LEADCF17" data-territory />
+          <!-- Zoho-eigenes Honeypot-Feld: muss leer mitgesendet werden -->
+          <input type="hidden" name="aG9uZXlwb3Q" value="" />
+
+          <!-- Honeypot für Bots (offscreen, nicht display:none) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website_url">Website (bitte frei lassen)</label>
+            <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="lead-modell">Marke und Modell aus Ihrem Angebot <span class="field-req">*</span></label>
+            <input type="text" id="lead-modell" autocomplete="off" placeholder="zum Beispiel Jacuzzi J-335 oder Vortex Spas Mercury" aria-describedby="err-lead-modell" />
+            <p class="field-error" id="err-lead-modell" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="lead-preis">Angebotspreis</label>
+              <input type="text" id="lead-preis" autocomplete="off" inputmode="numeric" placeholder="zum Beispiel 14.900 €" />
+            </div>
+            <div class="field">
+              <label id="zeitpunkt-label">Wann soll der Whirlpool stehen?</label>
+              <div class="chip-row" role="group" aria-labelledby="zeitpunkt-label" data-zeitpunkt>
+                <button type="button" class="chip" aria-pressed="false" data-wert="In den nächsten vier Wochen">Bald</button>
+                <button type="button" class="chip" aria-pressed="true" data-wert="In ein bis drei Monaten">1 bis 3 Monate</button>
+                <button type="button" class="chip" aria-pressed="false" data-wert="Später">Später</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label id="umfang-label">Was ist im Angebot enthalten? (Mehrfachauswahl)</label>
+            <div class="chip-row" role="group" aria-labelledby="umfang-label" data-umfang>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Lieferung">Lieferung</button>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Aufstellung">Aufstellung</button>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Thermoabdeckung">Abdeckung</button>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Treppe">Treppe</button>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Einweisung">Einweisung</button>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Service vor Ort">Service</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label id="stellplatz-label">Steht der Stellplatz schon?</label>
+            <div class="chip-row" role="group" aria-labelledby="stellplatz-label" data-stellplatz>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Stellplatz fertig">Ja, fertig</button>
+              <button type="button" class="chip" aria-pressed="true" data-wert="Stellplatz in Planung">In Planung</button>
+              <button type="button" class="chip" aria-pressed="false" data-wert="Stellplatz noch offen">Noch offen</button>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="lead-first">Vorname</label>
+              <input type="text" id="lead-first" name="First Name" autocomplete="given-name" />
+            </div>
+            <div class="field">
+              <label for="lead-last">Nachname <span class="field-req">*</span></label>
+              <input type="text" id="lead-last" name="Last Name" autocomplete="family-name" aria-describedby="err-lead-last" />
+              <p class="field-error" id="err-lead-last" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="lead-email">E-Mail <span class="field-req">*</span></label>
+            <input type="email" id="lead-email" name="Email" autocomplete="email" inputmode="email" aria-describedby="err-lead-email" />
+            <p class="field-error" id="err-lead-email" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="lead-phone">Telefon <span class="field-req">*</span></label>
+              <input type="tel" id="lead-phone" name="Phone" autocomplete="tel" inputmode="tel" aria-describedby="err-lead-phone" />
+              <p class="field-error" id="err-lead-phone" role="status" aria-live="polite"></p>
+            </div>
+            <div class="field field-plz">
+              <label for="lead-plz">Postleitzahl <span class="field-req">*</span></label>
+              <input type="text" id="lead-plz" name="Zip Code" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]*" maxlength="5" aria-describedby="err-lead-plz hint-lead-plz" />
+              <p class="field-hint" id="hint-lead-plz" aria-live="polite"></p>
+              <p class="field-error" id="err-lead-plz" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field field-consent">
+            <label class="consent-label" for="lead-consent">
+              <input type="checkbox" id="lead-consent" name="privacyConsent" value="ja" aria-describedby="err-lead-consent" />
+              <span>Ich bin einverstanden, dass SPA Deluxe mich anruft, um den Angebots-Check mit mir zu besprechen.
+                <a href="https://spadeluxe.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a></span>
+            </label>
+            <p class="field-error" id="err-lead-consent" role="status" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-arrow" id="lead-submit">Angebot prüfen lassen</button>
+        </form>
+
+        <p class="form-foot">
+          Lieber telefonisch? Rufen Sie uns direkt an:
+          <a href="tel:+4925974753015">02597 4753015</a>
+        </p>
+      </div>
+
+      <iframe name="zoho-lead-sink" title="Zoho" hidden aria-hidden="true"></iframe>
+
+      <!-- Bestätigung (app.js → showSuccess). Phase 1 kurz der Balken, Phase 2 die Karte mit den nächsten Schritten. -->
+      <div class="lead-success" id="lead-success" data-phase="prep" hidden>
+        <div class="lead-prep">
+          <div class="lead-prep-bar" aria-hidden="true"><span class="lead-prep-bar-fill"></span></div>
+          <p class="lead-prep-text" role="status">Ihre Angaben werden übermittelt …</p>
+        </div>
+
+        <div class="lead-done">
+          <svg class="lead-check" viewBox="0 0 56 56" width="56" height="56" aria-hidden="true" focusable="false">
+            <circle class="lead-check-bg" cx="28" cy="28" r="25" />
+            <circle class="lead-check-ring" cx="28" cy="28" r="25" />
+            <path class="lead-check-tick" d="M17 29.5l7.2 7.2L39.5 21" />
+          </svg>
+          <h3 class="lead-done-title" id="lead-success-title" tabindex="-1">Danke<span data-lead-name hidden>, <span data-lead-first></span></span>. Ihr Berater ruft Sie innerhalb von zwei Werktagen an.</h3>
+
+          <div class="ticket" aria-label="Ihr Angebots-Check">
+            <div class="ticket-kopf">
+              <span class="t1">Ihr Angebots-Check</span>
+              <span class="t2">SPA Deluxe</span>
+            </div>
+            <div class="ticket-zeile"><span class="k">Jetzt</span><span class="v">Ihr Berater prüft Ihr Angebot gegen vergleichbare Modelle der vier Marken</span></div>
+            <div class="ticket-zeile"><span class="k">Anruf</span><span class="v">werktags innerhalb von zwei Werktagen, von einer Nummer von SPA Deluxe</span></div>
+            <div class="ticket-zeile"><span class="k">Angebot</span><span class="v">können Sie Ihrem Berater nach dem Anruf per E-Mail oder WhatsApp schicken</span></div>
+            <div class="ticket-zeile"><span class="k">Danach</span><span class="v">auf Wunsch Probesitzen in Ihrer nächsten Ausstellung</span></div>
+          </div>
+
+          <div class="lead-done-note">
+            <p>Bis dahin: Lassen Sie das Angebot ruhig liegen. Unterschreiben Sie erst, wenn Sie den Vergleich kennen.</p>
+            <p class="lead-done-fast">Lieber sofort sprechen? <a href="tel:+4925974753015">02597 4753015</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="brands" aria-label="Marken im Vergleich">
+      <span class="brand">Jacuzzi</span>
+      <span class="brand">Vortex Spas</span>
+      <span class="brand">Treesse</span>
+      <span class="brand">Fisher Spas</span>
+    </div>
+
+    <div class="trust-strip">
+      <span class="trust-pill"><span class="dot"></span> DtGV-Ausgezeichnet · 7× 1. Platz</span>
+      <span class="trust-pill"><span class="dot"></span> 9 Jahre am Markt</span>
+      <span class="trust-pill"><span class="dot"></span> 6 Ausstellungen in Deutschland</span>
+      <span class="trust-pill"><span class="dot"></span> 4,8 ★ bei Google</span>
+      <span class="trust-pill"><span class="dot"></span> 4.000+ verkaufte Whirlpools</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap site-footer-inner">
+    <img src="assets/logo-white.png" alt="SPA Deluxe" class="footer-logo" />
+    <span class="footer-divider">·</span>
+    <span>SPA Deluxe GmbH</span>
+    <span class="footer-divider">·</span>
+    <a href="https://spadeluxe.de/impressum/" target="_blank" rel="noopener">Impressum</a>
+    <span class="footer-divider">·</span>
+    <a href="https://spadeluxe.de/datenschutz/" target="_blank" rel="noopener">Datenschutz</a>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     DSGVO Cookie-Banner
+     ============================================================ -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" aria-hidden="true">
+  <h4 id="cookie-title">Cookies &amp; Privatsphäre</h4>
+  <p id="cookie-desc">
+    Wir verwenden Cookies, um die Funktion dieser Seite zu gewährleisten.
+    Wenn Sie „Alle akzeptieren" wählen, laden wir zusätzlich Dienste für
+    Statistik und Werbung: Google Analytics, Meta und Usermaven. Details
+    finden Sie in unserer
+    <a href="https://spadeluxe.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.
+  </p>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-primary" data-cookie="all">Alle akzeptieren</button>
+    <button type="button" class="cookie-essential" data-cookie="essential">Nur Notwendige</button>
+  </div>
+</div>
+
+
+<!-- check.js vor app.js: Es schreibt die Eckdaten in das Feld Description und prüft das Pflichtfeld Modell, bevor app.js das Formular absendet. -->
+<script src="check.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
