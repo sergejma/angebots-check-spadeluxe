@@ -77,7 +77,7 @@
       const teile = ['Angebots-Check, Berater ruft an und bespricht den Vergleich am Telefon'];
       teile.push('Marke und Modell: ' + modell.value.trim());
       if (preis && preis.value.trim()) teile.push('Angebotspreis: ' + preis.value.trim());
-      const u = umfang(); teile.push('Im Angebot enthalten: ' + (u.length ? u.join(', ') : 'keine Angabe'));
+      const u = umfang(); if (u.length) teile.push('Im Angebot enthalten: ' + u.join(', '));
       const z = zeitpunkt(); if (z.length) teile.push('Zeitpunkt: ' + z[0]);
       const st = stellplatz(); if (st.length) teile.push('Stellplatz: ' + st[0]);
       if (beschreibung) beschreibung.value = teile.join(' · ').slice(0, 1900);
